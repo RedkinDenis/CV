@@ -1,0 +1,112 @@
+\documentclass[12pt,a4paper,hyperref={pdfpagelayout={TwoPageRight}}]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+
+\usepackage[a4paper,top=1.5cm, bottom=1.5cm, left=1cm, right=1cm]{geometry}
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в формулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+
+\usepackage{amsmath}
+\usepackage{indentfirst}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{array}
+
+\usepackage{wrapfig}
+\usepackage{siunitx} % Required for alignment
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{caption}
+\usepackage{tabto}
+
+\setlength{\hintscolumnwidth}{0.19 \linewidth}
+%\setlength{\makecvtitlenamewidth}{10cm}
+
+\definecolor{urlblue}{RGB}{56, 115, 178}
+
+\def\slink#1#2{\textcolor{urlblue}{\underline{\href{#1}{#2}}}}
+
+\def\hdrinfo#1#2{
+    \href{#2}{\texttt{#2}} \hspace*{\fill} \fbox{#1} \vspace*{0.5em}\\
+}
+
+\def\hdr#1{\textbf{\underline{#1}}}
+
+\def\vlimiter{\vspace{0.6em}}
+
+
+
+\name{Редькин}{Денис}
+
+\title{Студент первого курса ФРКТ МФТИ, 19 лет}
+
+\phone[mobile]{+7 (988)-942-99-67}
+\email{zapobedu1075@gmail.com}
+\social[github]{RedkinDenis}
+\social[telegram]{MIPT_Balbes}
+\photo[100pt][0.4pt]{portrait.png}
+
+\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+
+\begin{document}
+\makecvtitle
+
+\section{Образование}
+\cventry{2023 -- настоящее время}{Бакалавриат прикладная математика и физика}{ФРКТ МФТИ}{1 курс}{}{Средний балл - 8.1/10 $\mid$ Средний балл по программированию - 9/10}{}
+
+\section{Проекты}
+
+\subsection{МФТИ, курс Дединского И.Р.}
+
+\cvitem{Май 2024}{\hdr{Компилятор и язык программирования}}{\hdrinfo{C/C++, make, dot}{https://github.com/RedkinDenis/language}}{\hspace*{1.2em}}{
+    Разработка собственного эзотерического языка программирования и компилятора для собственного \slink{https://github.com/RedkinDenis/redkin_processor}{CPU}.
+}
+\vlimiter
+
+\cvitem{Февраль 2024}{\hdr{Эмулятор процессора}}{\hdrinfo{C/C++, make}{https://github.com/ralex2304/Processor}}{\hspace*{1em}}{
+    Ассемблер, SPU, дизассемблер. Процессор использует стек для вычислений. Реализованы регистры и оперативная память. 
+}
+\vlimiter
+
+\cvitem{Март - Апрель 2024}{\hdr{Акинатор для Дня Открытых Дверей МФТИ ФРКТ}}{\hdrinfo{C/C++, make, dot, TXLib}{https://github.com/RedkinDenis/akinator}}{\hspace*{1em}}{
+    Реализована игра Акинатор с тематикой факультета. Данные хранятся в бинарном дереве. На основе TXLib написан интерактивный визуальный интерфейс для игры и заполнения дерева новыми данными.
+}
+\vlimiter
+
+\cvitem{Апрель 2024}{\hdr{Дифференциатор}}{\hdrinfo{C/C++, make, dot, tex}{https://github.com/RedkinDenis/differentiator}}{\hspace*{1em}}{
+    Арифметическое выражения методом рекурсивного спуска считывается из текстового файла и записывается в бинарное дерево. Реализованы оптимизации считанного и дифференцированного дерева. На выход в tex файл подается полный дифференциал функции одной и более переменных.
+}
+\vlimiter
+
+\subsection{МФТИ, курс Владимирова К.И.}
+
+\cvitem{Май 2024}{\hdr{Реализация стратегии вытеснения кэша LRU-K}}{\hdrinfo{C, cmake, dot}{https://github.com/UsoltsevI/Cache}}{\hspace*{1em}}{
+    Над проектом работала команда из 4х человек. Мною были реализованы структуры данных.
+}
+\vlimiter
+
+\section{Навыки}
+\cvitem{IT}{C/C++, git, make, dot, perf, valgrind, latex, doxygen,  python, matplotlib}
+\cvitem{Soft skills}{Усердие, способность работать как в команде так и в одиночку}
+\cvitem{Хобби}{Спорт: сборная МФТИ по армрестлингу}
+\cvitem{Языки}{Английский А2, Русский (родной)}
+
+\section{Достижения}
+
+\begin{itemize}
+
+\item Олимпиада Курчатов по математике - призер 1 степени
+\item Олимпиада Шаг в будущее по математике - призер 1 степени
+\item Олимпиада Миссия выполнима по математике - призер 1 степени
+\item Олимпиада На базе ведомственных организаций по математике - призер 1 степени
+\item Олимпиада Ломоносов по математике - призер 3 степени
+\item Олимпиада Физтех по физике - призер 2 степени
+
+\end{itemize}
+
+\end{document}
